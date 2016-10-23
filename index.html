@@ -121,7 +121,7 @@
           <input id="icon_telephone" type="email" class="validate"> <label for="icon_telephone">Email</label>
         </div>
         </div>
-         <div style="float:right; padding-right:10px;"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Confirm</a>
+         <div style="float:right; padding-right:10px;"> <a class="waves-effect waves-light btn" href="#modal1" id="confirm">Confirm</a>
                  
          </div>
              <!-- Modal Structure -->
@@ -170,7 +170,7 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript">
       $( document ).ready(function(){
-            $('.modal-trigger').leanModal();
+           $('.modal-trigger').leanModal();
       $(".button-collapse").sideNav();
 
       setTimeout(function() {
@@ -188,12 +188,19 @@
           $( "#backtosearch" ).click(function() {
           $('#flightinfo').hide("fadeOut");
           $('#home').show('fadeIn');
+               // $('#modal1').openModal();
           });
           
         
           $( "#btnmod" ).click(function() {
           $('#flightinfo').hide("fadeOut");
           $('#passengerinfo').show('fadeIn');
+              //$('#modal1').openModal();
+          });
+          
+           $( "#confirm" ).click(function() {
+          
+              $('#modal1').openModal();
           });
           
          $( "#ebp" ).click(function() {
